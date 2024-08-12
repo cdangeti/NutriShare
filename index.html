@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>NutriShare</h1>
+  </header>
+  <main>
+    <div class="container">
+      <!-- Login Form -->
+      <div id="login-form" class="card">
+        <h2>Login</h2>
+        <form id="login-form-content">
+          <input type="email" id="login-email" placeholder="Email" required>
+          <input type="password" id="login-password" placeholder="Password" required>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showRegistrationForm()">Register here</a></p>
+      </div>
+
+      <!-- Registration Form -->
+      <div id="registration-form" class="card" style="display: none;">
+        <h2>Register</h2>
+        <form id="registration-form-content">
+          <input type="text" id="register-name" placeholder="Name" required>
+          <input type="email" id="register-email" placeholder="Email" required>
+          <input type="password" id="register-password" placeholder="Password" required>
+          <select id="register-role" required>
+            <option value="donor">Donor</option>
+            <option value="recipient">Recipient</option>
+          </select>
+          <button type="submit" class="btn-primary">Register</button>
+        </form>
+        <br>
+        <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+      </div>
+
+      <!-- Donation Section -->
+      <div id="donation-section" class="card" style="display: none;">
+        <h2>Donate Food</h2>
+        <form id="donation-form">
+          <input type="text" id="donation-item" placeholder="Item" required>
+          <input type="number" id="donation-quantity" placeholder="Quantity" required>
+          <input type="text" id="donation-address" placeholder="Address" required>
+          <button type="submit" class="btn-primary">Donate</button>
+        </form>
+        <br>
+        <h3>My Requests to be Cooked</h3>
+        <ul id="donation-list-recipient" class="donation-list"></ul>
+      </div>
+        
+
+      <!-- Request Section -->
+      <div id="request-section" class="card" style="display: none;">
+        <h2>Request Pickup</h2>
+        <form id="request-form">
+          <input type="text" id="request-item" placeholder="Item" required>
+          <button type="submit" class="btn-primary">Request Pickup</button>
+        </form>
+        <br>
+        <h3>Available Donations</h3>
+        <ul id="donation-list-donor" class="donation-list"></ul>
+        <br>
+        <div id="pickup-address-section" class="card" style="display: none;">
+          <h3>Pickup Address for Requested Food</h3>
+          <h5>-Plese Visit the adress below to pick up your food-</h5>
+          <br>
+          <div id="pickup-address"></div>
+        </div>
+      </div>
+
+ 
+      
+
+      <!-- Notification Box -->
+      <div id="notification-box" class="notification-box" style="display: none;"></div>
+
+      <!-- Logout Button -->
+      <button id="logout-btn" class="logout-btn" onclick="logout()" style="display: none;">Logout</button>
+    </div>
+  </main>
+  <footer>
+    <p>NutriShare &copy; 2024</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
