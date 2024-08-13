@@ -10,7 +10,7 @@ document.querySelector('#login-form-content').addEventListener('submit', functio
   const email = document.querySelector('#login-email').value;
   const password = document.querySelector('#login-password').value;
 
-  // Validate user
+  // Validate user 
   const user = users.find(user => user.email === email && user.password === password);
   if (user) {
     // Store user data in local storage
