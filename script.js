@@ -133,7 +133,7 @@ function acceptPickupRequest(request) {
   document.getElementById('pickup-address-section').style.display = 'block';
 
   // Notify the recipient
-  showNotification(`Your pickup request for ${request.item} has been accepted.`);
+  showNotification(`A pickup request for ${request.item} has been accepted.`);
 
   // Remove the donation from the list
   let donations = JSON.parse(localStorage.getItem('donations')) || [];
